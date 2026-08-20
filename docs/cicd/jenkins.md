@@ -18,11 +18,11 @@ keywords: Docker Compose, Jenkins, CI, 持续集成
 
 目录较扁平：`Linux/jenkins/docker-compose-jenkins.yml`，镜像注释为 `jenkins/jenkins:2.346.1`。
 
-源码：[Gitee Linux/jenkins](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/jenkins)
+源码目录：`Linux/jenkins`
 
 ## 关键配置拆解
 
-原文件：[docker-compose-jenkins.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/jenkins/docker-compose-jenkins.yml)。
+对照文件：`Linux/jenkins/docker-compose-jenkins.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/jenkins:2.346.1

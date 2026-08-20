@@ -19,11 +19,11 @@ keywords: Docker Compose, Nginx, 反向代理
 - `Linux/nginx/1.21.1`
 - `Linux/nginx/1.27.0`（推荐）
 
-源码：[Gitee Linux/nginx](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/nginx)
+源码目录：`Linux/nginx`
 
 ## 关键配置拆解（1.27.0）
 
-原文件：[docker-compose-nginx.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/nginx/1.27.0/docker-compose-nginx.yml)。
+对照文件：`Linux/nginx/1.27.0/docker-compose-nginx.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/nginx:1.27.0

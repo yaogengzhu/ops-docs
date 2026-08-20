@@ -19,11 +19,11 @@ S3 兼容对象存储：上传文件、图片、备份。本地开发用来代�
 - `Linux/minio/latest`（滚动标签，行为可能变）
 - `Linux/minio/RELEASE.2023-01-02T09-40-09Z`（钉死日期更稳）
 
-源码：[Gitee Linux/minio](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/minio)
+源码目录：`Linux/minio`
 
 ## 关键配置拆解（latest）
 
-原文件：[docker-compose-minio.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/minio/latest/docker-compose-minio.yml)。
+对照文件：`Linux/minio/latest/docker-compose-minio.yml`。
 
 ```yaml
 image: minio/minio:latest

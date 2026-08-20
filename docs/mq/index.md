@@ -1,12 +1,12 @@
 ---
 title: 消息队列 Docker Compose 清单
-description: 异步解耦、削峰填谷与流式处理。对照 ops-docs 与 yaogengzhu/docker-compose，按服务查看用途和源码目录。
+description: 异步解耦、削峰填谷与流式处理。按服务查看用途和编排目录。
 keywords: Docker Compose, 消息队列, 一键部署
 ---
 
 # 消息队列
 
-异步解耦、削峰填谷与流式处理。标了「详解」的页面有完整讲解，其余先给用途和源码入口。
+异步解耦、削峰填谷与流式处理。标了「详解」的页面有完整讲解，其余先给用途和本地目录。
 
 - [RabbitMQ](/mq/rabbitmq/)（详解）：启动带管理台的 RabbitMQ，讲清 5672/15672 端口、默认账号、延时插件，以及重装前为什么要清数据目录。
 - [Kafka](/mq/kafka/)：用编排拉起 Kafka，适合日志收集和高吞吐消息。本地开发也要准备好 ZooKeeper 或 KRaft 相关依赖。

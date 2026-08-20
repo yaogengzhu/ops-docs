@@ -21,11 +21,11 @@ keywords: Docker Compose, Nacos, 注册中心, 配置中心
 - `Linux/nacos/nacos-2.2.0`（推荐对照）
 - `Linux/nacos/nacos-latest`
 
-源码：[Gitee Linux/nacos](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/nacos)
+源码目录：`Linux/nacos`
 
 ## 关键配置拆解（2.2.0）
 
-原文件：[nacos-2.2.0/docker-compose.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/nacos/nacos-2.2.0/docker-compose.yml)。
+对照文件：`Linux/nacos/nacos-2.2.0/docker-compose.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/nacos-server:2.2.0

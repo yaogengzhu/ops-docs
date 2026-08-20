@@ -22,11 +22,11 @@ keywords: Docker Compose, MySQL 8, MySQL 5.7, 主从复制, 一键部署
 | `Linux/mysql/mysql8.0` | 默认推荐 |
 | `Linux/mysql/mysql-master-slave` | 练主从复制，不是生产方案 |
 
-源码：[Gitee Linux/mysql](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/mysql)
+源码目录：`Linux/mysql`
 
 ## 关键配置拆解（mysql8.0）
 
-原文件：[mysql8.0/docker-compose.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/mysql/mysql8.0/docker-compose.yml)（MIT，zhengqingya / fork yaogengzhu）。
+对照文件：`Linux/mysql/mysql8.0/docker-compose.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/mysql:8.0

@@ -26,7 +26,6 @@ export default defineConfig({
     nav: [
       { text: '开始使用', link: '/guide/getting-started' },
       { text: '全部服务', link: '/guide/catalog' },
-      { text: 'Compose 仓库', link: SITE.composeRepo },
     ],
     sidebar: buildSidebar(),
     search: {
@@ -54,10 +53,9 @@ export default defineConfig({
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
     darkModeSwitchLabel: '主题',
-    socialLinks: [{ icon: 'github', link: SITE.composeRepo }],
     footer: {
-      message: `编排文件来自 <a href="${SITE.composeRepo}">yaogengzhu/docker-compose</a>，fork 自 <a href="${SITE.upstreamRepo}">zhengqingya/docker-compose</a>（MIT）。`,
-      copyright: '© Ops Docs · 文案原创，yml 仅作讲解引用',
+      message: 'Docker Compose 中间件手册',
+      copyright: '© Ops Docs',
     },
   },
 })

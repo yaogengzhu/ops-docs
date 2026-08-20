@@ -21,11 +21,11 @@ Docker 的 Web 控制台：列表、日志、进终端、管 volume。比纯命�
 - `Linux/portainer/2.17.0`
 - `Linux/portainer/2.40.0`（推荐）
 
-源码：[Gitee Linux/portainer](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/portainer)
+源码目录：`Linux/portainer`
 
 ## 关键配置拆解（2.40.0）
 
-原文件：[docker-compose.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/portainer/2.40.0/docker-compose.yml)。
+对照文件：`Linux/portainer/2.40.0/docker-compose.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/portainer-ce:2.40.0

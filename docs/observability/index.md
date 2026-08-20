@@ -1,12 +1,12 @@
 ---
 title: 日志与可观测 Docker Compose 清单
-description: 采集、检索、监控告警与链路追踪。对照 ops-docs 与 yaogengzhu/docker-compose，按服务查看用途和源码目录。
+description: 采集、检索、监控告警与链路追踪。按服务查看用途和编排目录。
 keywords: Docker Compose, 日志与可观测, 一键部署
 ---
 
 # 日志与可观测
 
-采集、检索、监控告警与链路追踪。标了「详解」的页面有完整讲解，其余先给用途和源码入口。
+采集、检索、监控告警与链路追踪。标了「详解」的页面有完整讲解，其余先给用途和本地目录。
 
 - [Elasticsearch](/observability/elasticsearch/)：单独启动 ES，做全文检索或给 ELK 打底。注意内存、vm.max_map_count，以及不要把数据写进容器可写层。
 - [ELK](/observability/elk/)：Elasticsearch + Logstash + Kibana 一套日志检索。机器要够内存，小团队可先看 Loki 方案。

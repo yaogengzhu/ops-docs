@@ -25,11 +25,11 @@ keywords: Docker Compose, Redis 7, Redis 哨兵, Redis 集群, 一键部署
 | `Linux/redis/redis7.0.5/04-分片集群` | Cluster 协议试验 |
 | `Linux/redis/redis-manager` | 图形界面管实例 |
 
-源码：[Gitee Linux/redis](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/redis)
+源码目录：`Linux/redis`
 
 ## 关键配置拆解（7.0.5 单机）
 
-原文件：[01-单机/docker-compose-redis.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/redis/redis7.0.5/01-%E5%8D%95%E6%9C%BA/docker-compose-redis.yml)。
+对照文件：`Linux/redis/redis7.0.5/01-单机/docker-compose-redis.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/redis:7.0.5

@@ -18,7 +18,7 @@ BPMN 工作流引擎，用来跑审批流。需要数据库，业务里真有流
 
 ## 启动
 
-进入 Gitee 对应目录，阅读其中的 `run.md`，一般是：
+进入编排仓库的 `Linux/flowable` 目录，阅读其中的 `run.md`，一般是：
 
 ```shell
 docker compose -f docker-compose.yml -p flowable up -d
@@ -26,8 +26,8 @@ docker compose -f docker-compose.yml -p flowable up -d
 
 部分目录的编排文件名不是 `docker-compose.yml`，以该目录实际文件为准。
 
-## 源码
+## 目录
 
-- [Gitee：Linux/flowable](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/flowable)
+编排文件在 `Linux/flowable`。
 
 > 完整章节（配置拆解、端口账号、常见坑）将按 MySQL / Redis 等同模板补齐。

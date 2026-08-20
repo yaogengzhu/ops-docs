@@ -1,12 +1,12 @@
 ---
 title: 其它中间件 Docker Compose 清单
-description: 注册配置、任务调度、工作流与协作。对照 ops-docs 与 yaogengzhu/docker-compose，按服务查看用途和源码目录。
+description: 注册配置、任务调度、工作流与协作。按服务查看用途和编排目录。
 keywords: Docker Compose, 其它中间件, 一键部署
 ---
 
 # 其它中间件
 
-注册配置、任务调度、工作流与协作。标了「详解」的页面有完整讲解，其余先给用途和源码入口。
+注册配置、任务调度、工作流与协作。标了「详解」的页面有完整讲解，其余先给用途和本地目录。
 
 - [Nacos](/middleware/nacos/)（详解）：注册中心与配置中心。2.2.0 单机依赖外部 MySQL，启动前要改连接信息并导入 nacos-mysql.sql。
 - [XXL-JOB](/middleware/xxl-job/)：分布式任务调度，带管理台。适合定时任务、分片执行，需要配合执行器和数据库。

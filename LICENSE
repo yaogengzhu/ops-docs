@@ -2,8 +2,7 @@ MIT License
 
 Copyright (c) 2026 Ops Docs contributors
 
-编排文件与部分命令说明源自 https://gitee.com/zhengqingya/docker-compose （MIT）
-及其 fork https://gitee.com/yaogengzhu/docker-compose 。
+编排文件与部分命令说明源自上游 docker-compose 开源仓库（MIT）。
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

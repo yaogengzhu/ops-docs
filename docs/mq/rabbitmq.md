@@ -21,11 +21,11 @@ AMQP 消息队列，路由灵活（direct / topic / fanout），适合订单、�
 - `Linux/rabbitmq/3.9.1-management-cluster`
 - `Linux/rabbitmq/3.9.1-management-cluster-haproxy`
 
-源码：[Gitee Linux/rabbitmq](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/rabbitmq)
+源码目录：`Linux/rabbitmq`
 
 ## 关键配置拆解（3.9.1-management）
 
-原文件：[docker-compose-rabbitmq.yml](https://gitee.com/yaogengzhu/docker-compose/blob/master/Linux/rabbitmq/3.9.1-management/docker-compose-rabbitmq.yml)。
+对照文件：`Linux/rabbitmq/3.9.1-management/docker-compose-rabbitmq.yml`。
 
 ```yaml
 image: registry.cn-hangzhou.aliyuncs.com/zhengqing/rabbitmq:3.9.1-management

@@ -19,7 +19,7 @@ Promtail 采集 + Loki 存储 + Grafana 查看，比 ELK 更省资源，适合�
 
 ## 启动
 
-进入 Gitee 对应目录，阅读其中的 `run.md`，一般是：
+进入编排仓库的 `Linux/grafana_promtail_loki` 目录，阅读其中的 `run.md`，一般是：
 
 ```shell
 docker compose -f docker-compose.yml -p grafana-loki up -d
@@ -27,8 +27,8 @@ docker compose -f docker-compose.yml -p grafana-loki up -d
 
 部分目录的编排文件名不是 `docker-compose.yml`，以该目录实际文件为准。
 
-## 源码
+## 目录
 
-- [Gitee：Linux/grafana_promtail_loki](https://gitee.com/yaogengzhu/docker-compose/tree/master/Linux/grafana_promtail_loki)
+编排文件在 `Linux/grafana_promtail_loki`。
 
 > 完整章节（配置拆解、端口账号、常见坑）将按 MySQL / Redis 等同模板补齐。

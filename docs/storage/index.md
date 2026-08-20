@@ -1,12 +1,12 @@
 ---
 title: 文件存储 Docker Compose 清单
-description: 对象存储、分布式文件与网盘。对照 ops-docs 与 yaogengzhu/docker-compose，按服务查看用途和源码目录。
+description: 对象存储、分布式文件与网盘。按服务查看用途和编排目录。
 keywords: Docker Compose, 文件存储, 一键部署
 ---
 
 # 文件存储
 
-对象存储、分布式文件与网盘。标了「详解」的页面有完整讲解，其余先给用途和源码入口。
+对象存储、分布式文件与网盘。标了「详解」的页面有完整讲解，其余先给用途和本地目录。
 
 - [MinIO](/storage/minio/)（详解）：兼容 S3 的对象存储，本地替代 OSS/COS。控制台 9001，API 9002，默认账号务必上线前改掉。
 - [FastDFS](/storage/fastdfs/)：国内常用的分布式文件存储，Tracker + Storage 组合。新项目更常直接用 MinIO / S3。

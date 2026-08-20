@@ -2,7 +2,7 @@
 layout: home
 title: Ops Docs
 titleTemplate: Docker Compose 中间件手册
-description: Docker Compose 中间件手册。对照 yaogengzhu/docker-compose，讲清每个编排做什么、何时用、怎么跑、关键配置怎么改。
+description: Docker Compose 中间件手册。讲清每个编排做什么、何时用、怎么跑、关键配置怎么改。
 keywords: Docker Compose, 一键部署, 中间件手册, MySQL, Redis, Nacos, Ops Docs
 hero:
   name: Ops Docs

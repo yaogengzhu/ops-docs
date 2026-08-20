@@ -1,12 +1,12 @@
 ---
 title: 数据库 Docker Compose 清单
-description: 关系库、缓存、分库分表与数据同步。对照 ops-docs 与 yaogengzhu/docker-compose，按服务查看用途和源码目录。
+description: 关系库、缓存、分库分表与数据同步。按服务查看用途和编排目录。
 keywords: Docker Compose, 数据库, 一键部署
 ---
 
 # 数据库
 
-关系库、缓存、分库分表与数据同步。标了「详解」的页面有完整讲解，其余先给用途和源码入口。
+关系库、缓存、分库分表与数据同步。标了「详解」的页面有完整讲解，其余先给用途和本地目录。
 
 - [MySQL](/database/mysql/)（详解）：用仓库里的 mysql5.7 / mysql8.0 / 主从编排在本地快速拉起 MySQL，讲清端口映射、root 密码、数据卷和常见启动失败原因。
 - [Redis](/database/redis/)（详解）：对照 redis6 / redis7 的单机、主从、哨兵和分片编排，说明密码、持久化、数据目录，以及什么时候不该开集群。

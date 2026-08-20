@@ -1,7 +1,7 @@
 ---
 title: 用 Docker Compose 仓库准备环境
-description: 克隆 yaogengzhu/docker-compose，安装 Docker 后按每个服务目录的 run.md 启动。本文说明目录约定和常用命令。
-keywords: Docker Compose, 环境准备, git clone, docker compose up
+description: 安装 Docker 后按每个服务目录的 run.md 启动。本文说明目录约定和常用命令。
+keywords: Docker Compose, 环境准备, docker compose up
 ---
 
 # 环境准备
@@ -17,10 +17,11 @@ docker version
 docker compose version
 ```
 
-## 2. 克隆编排仓库
+## 2. 准备编排仓库
+
+把 Compose 编排仓库放到本机，进入 `Linux` 目录：
 
 ```shell
-git clone https://gitee.com/yaogengzhu/docker-compose.git
 cd docker-compose/Linux
 ```
 

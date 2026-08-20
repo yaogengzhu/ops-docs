@@ -1,12 +1,12 @@
 ---
 title: CI/CD 与网关 Docker Compose 清单
-description: 流水线、容器管理和反向代理。对照 ops-docs 与 yaogengzhu/docker-compose，按服务查看用途和源码目录。
+description: 流水线、容器管理和反向代理。按服务查看用途和编排目录。
 keywords: Docker Compose, CI/CD 与网关, 一键部署
 ---
 
 # CI/CD 与网关
 
-流水线、容器管理和反向代理。标了「详解」的页面有完整讲解，其余先给用途和源码入口。
+流水线、容器管理和反向代理。标了「详解」的页面有完整讲解，其余先给用途和本地目录。
 
 - [Portainer](/cicd/portainer/)（详解）：浏览器里管理 Docker：看容器、日志、重启。挂载 docker.sock，首次打开要创建管理员账号。
 - [Jenkins](/cicd/jenkins/)（详解）：在容器里跑 Jenkins 做 CI。说明 10000 端口、初始密码位置、时区，以及挂载 docker.sock 在容器内构建镜像。
