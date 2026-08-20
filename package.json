@@ -8,7 +8,8 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "gen:stubs": "node scripts/generate-stubs.mjs"
+    "gen:stubs": "node scripts/generate-stubs.mjs",
+    "deploy": "pnpm gen:stubs && pnpm build && wrangler pages deploy docs/.vitepress/dist --project-name=ops-docs"
   },
   "packageManager": "pnpm@10.30.3",
   "pnpm": {

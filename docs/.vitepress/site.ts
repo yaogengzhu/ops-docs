@@ -1,14 +1,12 @@
-/** 站点级配置：换域名或仓库名时只改这里。 */
+/** 站点级配置：换域名时只改 hostname。 */
 
 export const SITE = {
   name: 'Ops Docs',
   titleTemplate: ':title | Ops Docs',
   description:
     'Docker Compose 中间件手册。讲清每个编排做什么、何时用、怎么跑、关键配置怎么改。',
-  /** 仅 origin，不要带仓库路径；路径走 base。 */
-  hostname: 'https://yaogengzhu.github.io',
-  /** 项目站前缀。自定义域名时改成 '/'。 */
-  base: '/ops-docs/',
+  hostname: 'https://ops.zhizili.com',
+  base: '/',
   lang: 'zh-CN',
   locale: 'zh_CN',
   ogImage: '/og.png',

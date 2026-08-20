@@ -1,0 +1,4 @@
+name = "ops-docs"
+account_id = "4565be562a022ff9b31775df002f1169"
+compatibility_date = "2026-08-21"
+pages_build_output_dir = "docs/.vitepress/dist"

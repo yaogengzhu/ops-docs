@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yaogengzhu.github.io/ops-docs/sitemap.xml
+Sitemap: https://ops.zhizili.com/sitemap.xml
