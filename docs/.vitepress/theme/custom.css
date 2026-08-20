@@ -1,0 +1,65 @@
+:root {
+  --vp-c-brand-1: #0d9488;
+  --vp-c-brand-2: #0f766e;
+  --vp-c-brand-3: #115e59;
+}
+
+.catalog {
+  margin: 48px auto 0;
+  max-width: 1152px;
+  padding: 0 24px 64px;
+}
+
+.catalog__group + .catalog__group {
+  margin-top: 40px;
+}
+
+.catalog__head h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  border: 0;
+}
+
+.catalog__head p {
+  margin: 6px 0 16px;
+  color: var(--vp-c-text-2);
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-1px);
+}
+
+.card strong {
+  font-size: 1.02rem;
+}
+
+.card .tag {
+  margin-left: 8px;
+  font-size: 12px;
+  color: var(--vp-c-brand-1);
+}
+
+.card p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--vp-c-text-2);
+}

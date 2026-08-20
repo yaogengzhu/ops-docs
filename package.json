@@ -1,0 +1,21 @@
+{
+  "name": "ops-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Docker Compose 中间件手册：讲清每个编排做什么、何时用、怎么跑",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "gen:stubs": "node scripts/generate-stubs.mjs"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}

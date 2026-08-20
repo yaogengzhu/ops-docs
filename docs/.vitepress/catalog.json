@@ -1,0 +1,604 @@
+{
+  "categories": [
+    {
+      "id": "database",
+      "name": "数据库",
+      "summary": "关系库、缓存、分库分表与数据同步"
+    },
+    {
+      "id": "mq",
+      "name": "消息队列",
+      "summary": "异步解耦、削峰填谷与流式处理"
+    },
+    {
+      "id": "observability",
+      "name": "日志与可观测",
+      "summary": "采集、检索、监控告警与链路追踪"
+    },
+    {
+      "id": "cicd",
+      "name": "CI/CD 与网关",
+      "summary": "流水线、容器管理和反向代理"
+    },
+    {
+      "id": "storage",
+      "name": "文件存储",
+      "summary": "对象存储、分布式文件与网盘"
+    },
+    {
+      "id": "middleware",
+      "name": "其它中间件",
+      "summary": "注册配置、任务调度、工作流与协作"
+    }
+  ],
+  "services": [
+    {
+      "slug": "mysql",
+      "name": "MySQL",
+      "category": "database",
+      "title": "Docker Compose 一键部署 MySQL",
+      "description": "用仓库里的 mysql5.7 / mysql8.0 / 主从编排在本地快速拉起 MySQL，讲清端口映射、root 密码、数据卷和常见启动失败原因。",
+      "keywords": "Docker Compose, MySQL 8, MySQL 5.7, 主从复制, 一键部署",
+      "giteePath": "Linux/mysql",
+      "versions": ["mysql5.7", "mysql8.0", "mysql-master-slave"],
+      "featured": true
+    },
+    {
+      "slug": "redis",
+      "name": "Redis",
+      "category": "database",
+      "title": "Docker Compose 一键部署 Redis",
+      "description": "对照 redis6 / redis7 的单机、主从、哨兵和分片编排，说明密码、持久化、数据目录，以及什么时候不该开集群。",
+      "keywords": "Docker Compose, Redis 7, Redis 哨兵, Redis 集群, 一键部署",
+      "giteePath": "Linux/redis",
+      "versions": ["redis6.0.8", "redis7.0.5 单机/主从/哨兵/分片", "redis-manager"],
+      "featured": true
+    },
+    {
+      "slug": "mongodb",
+      "name": "MongoDB",
+      "category": "database",
+      "title": "Docker Compose 部署 MongoDB",
+      "description": "用 Compose 启动文档数据库 MongoDB，适合本地开发存 JSON 文档、做副本集试验，而不是直接当生产集群。",
+      "keywords": "Docker Compose, MongoDB, 文档数据库",
+      "giteePath": "Linux/mongodb",
+      "versions": []
+    },
+    {
+      "slug": "postgresql",
+      "name": "PostgreSQL",
+      "category": "database",
+      "title": "Docker Compose 部署 PostgreSQL",
+      "description": "一键拉起 PostgreSQL，适合需要窗口函数、JSON 和更严格 SQL 的开发环境，替代本机安装。",
+      "keywords": "Docker Compose, PostgreSQL, Postgres",
+      "giteePath": "Linux/postgresql",
+      "versions": []
+    },
+    {
+      "slug": "oracle18c",
+      "name": "Oracle 18c",
+      "category": "database",
+      "title": "Docker Compose 部署 Oracle 18c",
+      "description": "在 Linux 上用编排跑 Oracle 18c 开发库。镜像大、内存占用高，只建议兼容老系统时使用。",
+      "keywords": "Docker Compose, Oracle 18c, 数据库",
+      "giteePath": "Linux/oracle18c",
+      "versions": []
+    },
+    {
+      "slug": "couchbase",
+      "name": "Couchbase",
+      "category": "database",
+      "title": "Docker Compose 部署 Couchbase",
+      "description": "启动 Couchbase 文档与缓存一体的数据库，用于体验 N1QL 和桶管理，不适合当作默认业务库。",
+      "keywords": "Docker Compose, Couchbase",
+      "giteePath": "Linux/couchbase",
+      "versions": []
+    },
+    {
+      "slug": "mycat",
+      "name": "MyCat",
+      "category": "database",
+      "title": "Docker Compose 部署 MyCat 分库分表",
+      "description": "MyCat 是 MySQL 前的中间件，用来做分库分表和读写分离。先有 MySQL，再跑这个编排才有意义。",
+      "keywords": "Docker Compose, MyCat, 分库分表",
+      "giteePath": "Linux/mycat",
+      "versions": []
+    },
+    {
+      "slug": "canal",
+      "name": "Canal",
+      "category": "database",
+      "title": "Docker Compose 部署 Canal 增量同步",
+      "description": "Canal 模拟 MySQL slave 解析 binlog，把增量变更投递给下游。用来做缓存刷新、异构同步，不是业务数据库。",
+      "keywords": "Docker Compose, Canal, binlog, MySQL 同步",
+      "giteePath": "Linux/canal",
+      "versions": []
+    },
+    {
+      "slug": "seata",
+      "name": "Seata",
+      "category": "database",
+      "title": "Docker Compose 部署 Seata 分布式事务",
+      "description": "Seata 提供分布式事务协调。微服务拆库后需要跨服务一致性时再用，单库应用不必上。",
+      "keywords": "Docker Compose, Seata, 分布式事务",
+      "giteePath": "Linux/seata",
+      "versions": []
+    },
+    {
+      "slug": "yearning",
+      "name": "Yearning",
+      "category": "database",
+      "title": "Docker Compose 部署 Yearning SQL 审核",
+      "description": "Yearning 是 SQL 审核与工单平台，给 DBA 和开发走变更流程，不是给应用连接的业务库。",
+      "keywords": "Docker Compose, Yearning, SQL 审核",
+      "giteePath": "Linux/yearning",
+      "versions": []
+    },
+    {
+      "slug": "rabbitmq",
+      "name": "RabbitMQ",
+      "category": "mq",
+      "title": "Docker Compose 一键部署 RabbitMQ",
+      "description": "启动带管理台的 RabbitMQ，讲清 5672/15672 端口、默认账号、延时插件，以及重装前为什么要清数据目录。",
+      "keywords": "Docker Compose, RabbitMQ, AMQP, 延时队列",
+      "giteePath": "Linux/rabbitmq",
+      "versions": ["3.7.8-management", "3.9.1-management", "3.9.1-management-cluster", "cluster-haproxy"],
+      "featured": true
+    },
+    {
+      "slug": "kafka",
+      "name": "Kafka",
+      "category": "mq",
+      "title": "Docker Compose 部署 Kafka",
+      "description": "用编排拉起 Kafka，适合日志收集和高吞吐消息。本地开发也要准备好 ZooKeeper 或 KRaft 相关依赖。",
+      "keywords": "Docker Compose, Kafka, 消息队列",
+      "giteePath": "Linux/kafka",
+      "versions": []
+    },
+    {
+      "slug": "rocketmq",
+      "name": "RocketMQ",
+      "category": "mq",
+      "title": "Docker Compose 部署 RocketMQ",
+      "description": "阿里系消息中间件，NameServer + Broker 组合。适合顺序消息、事务消息等国内业务场景的本地试验。",
+      "keywords": "Docker Compose, RocketMQ, NameServer",
+      "giteePath": "Linux/rocketmq",
+      "versions": []
+    },
+    {
+      "slug": "activemq",
+      "name": "ActiveMQ",
+      "category": "mq",
+      "title": "Docker Compose 部署 ActiveMQ",
+      "description": "经典 JMS 消息代理。维护老 Java 系统或需要 STOMP/OpenWire 时再用，新项目更常选 RabbitMQ 或 Kafka。",
+      "keywords": "Docker Compose, ActiveMQ, JMS",
+      "giteePath": "Linux/activemq",
+      "versions": []
+    },
+    {
+      "slug": "pulsar",
+      "name": "Pulsar",
+      "category": "mq",
+      "title": "Docker Compose 部署 Apache Pulsar",
+      "description": "Pulsar 把计算和存储分离，能当队列也能当日志。组件比 Kafka 多，本机先跑单机体验即可。",
+      "keywords": "Docker Compose, Pulsar, Apache Pulsar",
+      "giteePath": "Linux/pulsar",
+      "versions": []
+    },
+    {
+      "slug": "elasticsearch",
+      "name": "Elasticsearch",
+      "category": "observability",
+      "title": "Docker Compose 部署 Elasticsearch",
+      "description": "单独启动 ES，做全文检索或给 ELK 打底。注意内存、vm.max_map_count，以及不要把数据写进容器可写层。",
+      "keywords": "Docker Compose, Elasticsearch, 全文检索",
+      "giteePath": "Linux/elasticsearch",
+      "versions": []
+    },
+    {
+      "slug": "elk",
+      "name": "ELK",
+      "category": "observability",
+      "title": "Docker Compose 部署 ELK 日志栈",
+      "description": "Elasticsearch + Logstash + Kibana 一套日志检索。机器要够内存，小团队可先看 Loki 方案。",
+      "keywords": "Docker Compose, ELK, Kibana, Logstash",
+      "giteePath": "Linux/elk",
+      "versions": []
+    },
+    {
+      "slug": "efk",
+      "name": "EFK",
+      "category": "observability",
+      "title": "Docker Compose 部署 EFK",
+      "description": "用 Fluentd 替代 Logstash 的采集栈，同样落到 Elasticsearch。适合已经在用 Fluentd 的环境。",
+      "keywords": "Docker Compose, EFK, Fluentd, Elasticsearch",
+      "giteePath": "Linux/efk",
+      "versions": []
+    },
+    {
+      "slug": "elkf",
+      "name": "ELKF",
+      "category": "observability",
+      "title": "Docker Compose 部署 ELKF",
+      "description": "在 ELK 基础上再加 Filebeat，把采集、解析、检索拆开。目录里组件多，按 run.md 顺序启动。",
+      "keywords": "Docker Compose, ELKF, Filebeat",
+      "giteePath": "Linux/elkf",
+      "versions": []
+    },
+    {
+      "slug": "filebeat",
+      "name": "Filebeat",
+      "category": "observability",
+      "title": "Docker Compose 部署 Filebeat",
+      "description": "轻量日志采集器，把文件或容器日志推到 ES / Logstash / Kafka。它不是存储，必须搭配下游。",
+      "keywords": "Docker Compose, Filebeat, 日志采集",
+      "giteePath": "Linux/filebeat",
+      "versions": []
+    },
+    {
+      "slug": "graylog",
+      "name": "Graylog",
+      "category": "observability",
+      "title": "Docker Compose 部署 Graylog",
+      "description": "带 Web 界面的日志管理，底层仍依赖 Elasticsearch 和 MongoDB。想少写 Kibana 查询时可以试。",
+      "keywords": "Docker Compose, Graylog, 日志管理",
+      "giteePath": "Linux/graylog",
+      "versions": []
+    },
+    {
+      "slug": "grafana-loki",
+      "name": "Grafana Loki",
+      "category": "observability",
+      "title": "Docker Compose 部署 Grafana Loki",
+      "description": "Promtail 采集 + Loki 存储 + Grafana 查看，比 ELK 更省资源，适合先把容器日志看起来。",
+      "keywords": "Docker Compose, Loki, Promtail, Grafana",
+      "giteePath": "Linux/grafana_promtail_loki",
+      "versions": ["grafana_promtail_loki", "grafana-promtail-loki-nginx-demo"]
+    },
+    {
+      "slug": "plumelog",
+      "name": "PlumeLog",
+      "category": "observability",
+      "title": "Docker Compose 部署 PlumeLog",
+      "description": "面向 Java 应用的链路日志系统，把 traceId 串起来看调用。不是通用 ELK 替代品。",
+      "keywords": "Docker Compose, PlumeLog, 链路日志",
+      "giteePath": "Linux/plumelog",
+      "versions": []
+    },
+    {
+      "slug": "zipkin",
+      "name": "Zipkin",
+      "category": "observability",
+      "title": "Docker Compose 部署 Zipkin",
+      "description": "分布式链路追踪的经典实现，用来看一次请求经过了哪些服务、耗时在哪。需要应用埋点上报。",
+      "keywords": "Docker Compose, Zipkin, 链路追踪",
+      "giteePath": "Linux/zipkin",
+      "versions": []
+    },
+    {
+      "slug": "prometheus",
+      "name": "Prometheus",
+      "category": "observability",
+      "title": "Docker Compose 部署 Prometheus",
+      "description": "拉模型监控与告警基础。先确定要刮哪些 exporter，再改配置，不要当成日志系统。",
+      "keywords": "Docker Compose, Prometheus, 监控",
+      "giteePath": "Linux/prometheus",
+      "versions": []
+    },
+    {
+      "slug": "grafana",
+      "name": "Grafana",
+      "category": "observability",
+      "title": "Docker Compose 部署 Grafana",
+      "description": "监控与日志的可视化面板，数据源可以是 Prometheus、Loki、ES。单独启动后要先配数据源。",
+      "keywords": "Docker Compose, Grafana, 仪表盘",
+      "giteePath": "Linux/grafana",
+      "versions": []
+    },
+    {
+      "slug": "skywalking",
+      "name": "SkyWalking",
+      "category": "observability",
+      "title": "Docker Compose 部署 SkyWalking",
+      "description": "Apache 可观测平台，指标、日志、链路一体，对 Java Agent 友好。比 Zipkin 更重，内存要留足。",
+      "keywords": "Docker Compose, SkyWalking, APM",
+      "giteePath": "Linux/skywalking",
+      "versions": []
+    },
+    {
+      "slug": "portainer",
+      "name": "Portainer",
+      "category": "cicd",
+      "title": "Docker Compose 一键部署 Portainer",
+      "description": "浏览器里管理 Docker：看容器、日志、重启。挂载 docker.sock，首次打开要创建管理员账号。",
+      "keywords": "Docker Compose, Portainer, Docker 可视化",
+      "giteePath": "Linux/portainer",
+      "versions": ["1.24.1", "1.25.0", "2.17.0", "2.40.0"],
+      "featured": true
+    },
+    {
+      "slug": "jenkins",
+      "name": "Jenkins",
+      "category": "cicd",
+      "title": "Docker Compose 一键部署 Jenkins",
+      "description": "在容器里跑 Jenkins 做 CI。说明 10000 端口、初始密码位置、时区，以及挂载 docker.sock 在容器内构建镜像。",
+      "keywords": "Docker Compose, Jenkins, CI, 持续集成",
+      "giteePath": "Linux/jenkins",
+      "versions": ["jenkins 2.346.1"],
+      "featured": true
+    },
+    {
+      "slug": "nginx",
+      "name": "Nginx",
+      "category": "cicd",
+      "title": "Docker Compose 一键部署 Nginx",
+      "description": "反向代理和静态站点。配置、html、日志都挂到宿主机，改完配置在容器里 nginx -s reload。",
+      "keywords": "Docker Compose, Nginx, 反向代理",
+      "giteePath": "Linux/nginx",
+      "versions": ["1.21.1", "1.27.0"],
+      "featured": true
+    },
+    {
+      "slug": "gitlab",
+      "name": "GitLab",
+      "category": "cicd",
+      "title": "Docker Compose 部署 GitLab",
+      "description": "自建 Git 与 CI。镜像大、内存高，笔记本请慎用；小团队可先看 Gogs。",
+      "keywords": "Docker Compose, GitLab, Git",
+      "giteePath": "Linux/gitlab",
+      "versions": []
+    },
+    {
+      "slug": "gogs",
+      "name": "Gogs",
+      "category": "cicd",
+      "title": "Docker Compose 部署 Gogs",
+      "description": "轻量自建 Git 服务，资源占用远小于 GitLab，适合个人或小团队托管代码。",
+      "keywords": "Docker Compose, Gogs, Git",
+      "giteePath": "Linux/gogs",
+      "versions": []
+    },
+    {
+      "slug": "rancher",
+      "name": "Rancher",
+      "category": "cicd",
+      "title": "Docker Compose 部署 Rancher",
+      "description": "Kubernetes 多集群管理界面。本机 Compose 版只适合体验，不要当成生产 K8s 发行版。",
+      "keywords": "Docker Compose, Rancher, Kubernetes",
+      "giteePath": "Linux/rancher",
+      "versions": []
+    },
+    {
+      "slug": "sonarqube",
+      "name": "SonarQube",
+      "category": "cicd",
+      "title": "Docker Compose 部署 SonarQube",
+      "description": "代码质量与安全扫描平台，通常和 CI 流水线一起用。需要配套数据库，启动较慢。",
+      "keywords": "Docker Compose, SonarQube, 代码扫描",
+      "giteePath": "Linux/sonarqube",
+      "versions": []
+    },
+    {
+      "slug": "minio",
+      "name": "MinIO",
+      "category": "storage",
+      "title": "Docker Compose 一键部署 MinIO",
+      "description": "兼容 S3 的对象存储，本地替代 OSS/COS。控制台 9001，API 9002，默认账号务必上线前改掉。",
+      "keywords": "Docker Compose, MinIO, S3, 对象存储",
+      "giteePath": "Linux/minio",
+      "versions": ["latest", "RELEASE.2023-01-02"],
+      "featured": true
+    },
+    {
+      "slug": "fastdfs",
+      "name": "FastDFS",
+      "category": "storage",
+      "title": "Docker Compose 部署 FastDFS",
+      "description": "国内常用的分布式文件存储，Tracker + Storage 组合。新项目更常直接用 MinIO / S3。",
+      "keywords": "Docker Compose, FastDFS, 文件存储",
+      "giteePath": "Linux/fastdfs",
+      "versions": []
+    },
+    {
+      "slug": "nextcloud",
+      "name": "Nextcloud",
+      "category": "storage",
+      "title": "Docker Compose 部署 Nextcloud",
+      "description": "自建网盘与协作，适合团队文件同步。不是给业务程序当对象存储用的。",
+      "keywords": "Docker Compose, Nextcloud, 网盘",
+      "giteePath": "Linux/nextcloud",
+      "versions": []
+    },
+    {
+      "slug": "baidupcs-web",
+      "name": "百度网盘 Web",
+      "category": "storage",
+      "title": "Docker Compose 部署百度网盘 Web",
+      "description": "给百度网盘加一层 Web 管理，方便离线下载和文件浏览。依赖你的网盘账号，不是通用对象存储。",
+      "keywords": "Docker Compose, 百度网盘, BaiduPCS",
+      "giteePath": "Linux/baidupcs-web",
+      "versions": []
+    },
+    {
+      "slug": "nacos",
+      "name": "Nacos",
+      "category": "middleware",
+      "title": "Docker Compose 一键部署 Nacos",
+      "description": "注册中心与配置中心。2.2.0 单机依赖外部 MySQL，启动前要改连接信息并导入 nacos-mysql.sql。",
+      "keywords": "Docker Compose, Nacos, 注册中心, 配置中心",
+      "giteePath": "Linux/nacos",
+      "versions": ["nacos-1.4.1", "nacos-2.0.3", "nacos-2.2.0", "nacos-latest"],
+      "featured": true
+    },
+    {
+      "slug": "xxl-job",
+      "name": "XXL-JOB",
+      "category": "middleware",
+      "title": "Docker Compose 部署 XXL-JOB",
+      "description": "分布式任务调度，带管理台。适合定时任务、分片执行，需要配合执行器和数据库。",
+      "keywords": "Docker Compose, XXL-JOB, 任务调度",
+      "giteePath": "Linux/xxl-job",
+      "versions": []
+    },
+    {
+      "slug": "powerjob",
+      "name": "PowerJob",
+      "category": "middleware",
+      "title": "Docker Compose 部署 PowerJob",
+      "description": "另一套分布式调度，支持 MapReduce 和工作流。和 XXL-JOB 二选一即可，不要两套一起上生产。",
+      "keywords": "Docker Compose, PowerJob, 任务调度",
+      "giteePath": "Linux/PowerJob",
+      "versions": []
+    },
+    {
+      "slug": "sentinel",
+      "name": "Sentinel",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Sentinel",
+      "description": "流量防护：限流、熔断、降级。控制台单独部署，规则要落到持久化，否则重启丢失。",
+      "keywords": "Docker Compose, Sentinel, 限流熔断",
+      "giteePath": "Linux/sentinel",
+      "versions": []
+    },
+    {
+      "slug": "zookeeper",
+      "name": "ZooKeeper",
+      "category": "middleware",
+      "title": "Docker Compose 部署 ZooKeeper",
+      "description": "分布式协调：选主、配置、Kafka/Dubbo 老版本依赖。新栈能不用 ZK 就不用。",
+      "keywords": "Docker Compose, ZooKeeper, 注册协调",
+      "giteePath": "Linux/zookeeper",
+      "versions": []
+    },
+    {
+      "slug": "yapi",
+      "name": "YApi",
+      "category": "middleware",
+      "title": "Docker Compose 部署 YApi",
+      "description": "接口文档与 Mock 平台，依赖 MongoDB。适合前后端约定 API，不是网关。",
+      "keywords": "Docker Compose, YApi, 接口文档",
+      "giteePath": "Linux/yapi",
+      "versions": []
+    },
+    {
+      "slug": "flowable",
+      "name": "Flowable",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Flowable",
+      "description": "BPMN 工作流引擎，用来跑审批流。需要数据库，业务里真有流程再部署。",
+      "keywords": "Docker Compose, Flowable, BPMN, 工作流",
+      "giteePath": "Linux/flowable",
+      "versions": []
+    },
+    {
+      "slug": "jumpserver",
+      "name": "JumpServer",
+      "category": "middleware",
+      "title": "Docker Compose 部署 JumpServer",
+      "description": "堡垒机：人到服务器的审计与授权。组件多，请按官方硬件建议准备，不要和业务容器混部。",
+      "keywords": "Docker Compose, JumpServer, 堡垒机",
+      "giteePath": "Linux/jumpserver",
+      "versions": []
+    },
+    {
+      "slug": "nps",
+      "name": "NPS",
+      "category": "middleware",
+      "title": "Docker Compose 部署 NPS 内网穿透",
+      "description": "轻量内网穿透，把内网服务映射出去。仅用于受控环境，注意鉴权和端口暴露。",
+      "keywords": "Docker Compose, NPS, 内网穿透",
+      "giteePath": "Linux/nps",
+      "versions": []
+    },
+    {
+      "slug": "tomcat",
+      "name": "Tomcat",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Tomcat",
+      "description": "经典 Java Servlet 容器。把 war 挂进去就能访问，适合跑老应用，新项目多用内嵌 Tomcat。",
+      "keywords": "Docker Compose, Tomcat, Java",
+      "giteePath": "Linux/tomcat",
+      "versions": []
+    },
+    {
+      "slug": "jrebel",
+      "name": "JRebel",
+      "category": "middleware",
+      "title": "Docker Compose 部署 JRebel 相关服务",
+      "description": "配合 Java 热加载的辅助服务。只在开发机使用，不要放到生产网络。",
+      "keywords": "Docker Compose, JRebel",
+      "giteePath": "Linux/jrebel",
+      "versions": []
+    },
+    {
+      "slug": "opensumi-web",
+      "name": "OpenSumi Web",
+      "category": "middleware",
+      "title": "Docker Compose 部署 OpenSumi Web IDE",
+      "description": "浏览器里的 IDE 框架演示。用来体验云端编辑，不是运维必备中间件。",
+      "keywords": "Docker Compose, OpenSumi, Web IDE",
+      "giteePath": "Linux/opensumi-web",
+      "versions": []
+    },
+    {
+      "slug": "walle",
+      "name": "Walle",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Walle 发布系统",
+      "description": "Web 发布平台，把代码发到目标机。小团队可用，大型流水线更常见 Jenkins / GitLab CI。",
+      "keywords": "Docker Compose, Walle, 发布系统",
+      "giteePath": "Linux/walle",
+      "versions": []
+    },
+    {
+      "slug": "jpom",
+      "name": "JPom",
+      "category": "middleware",
+      "title": "Docker Compose 部署 JPom",
+      "description": "简朴的项目运维与发布面板，能管脚本、构建和进程。适合小团队不想上 Jenkins 的场景。",
+      "keywords": "Docker Compose, JPom, 运维面板",
+      "giteePath": "Linux/jpom",
+      "versions": []
+    },
+    {
+      "slug": "confluence",
+      "name": "Confluence",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Confluence",
+      "description": "团队知识库。镜像和许可都要自行处理，个人笔记不必上这么重的套件。",
+      "keywords": "Docker Compose, Confluence, 知识库",
+      "giteePath": "Linux/confluence",
+      "versions": []
+    },
+    {
+      "slug": "jira",
+      "name": "Jira",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Jira",
+      "description": "缺陷与迭代跟踪。同样偏重，试用前看内存和许可证；小团队可用更轻的看板。",
+      "keywords": "Docker Compose, Jira, 项目管理",
+      "giteePath": "Linux/jira",
+      "versions": []
+    },
+    {
+      "slug": "dubbo-admin",
+      "name": "Dubbo Admin",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Dubbo Admin",
+      "description": "Dubbo 服务治理控制台，用来看提供者和消费者。没有 Dubbo 集群就不必启动。",
+      "keywords": "Docker Compose, Dubbo Admin, 微服务",
+      "giteePath": "Linux/dubbo-admin",
+      "versions": []
+    },
+    {
+      "slug": "azkaban",
+      "name": "Azkaban",
+      "category": "middleware",
+      "title": "Docker Compose 部署 Azkaban",
+      "description": "LinkedIn 开源的工作流调度，偏大数据任务依赖。常规 Spring 定时任务用 XXL-JOB 更简单。",
+      "keywords": "Docker Compose, Azkaban, 工作流调度",
+      "giteePath": "Linux/azkaban",
+      "versions": []
+    }
+  ]
+}
