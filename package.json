@@ -6,10 +6,10 @@
   "description": "Docker Compose 中间件手册：讲清每个编排做什么、何时用、怎么跑",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "build": "pnpm gen:stubs && vitepress build docs",
     "preview": "vitepress preview docs",
     "gen:stubs": "node scripts/generate-stubs.mjs",
-    "deploy": "pnpm gen:stubs && pnpm build && wrangler pages deploy docs/.vitepress/dist --project-name=ops-docs"
+    "deploy": "pnpm build && npx wrangler deploy"
   },
   "packageManager": "pnpm@10.30.3",
   "pnpm": {
