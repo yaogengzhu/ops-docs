@@ -26,6 +26,7 @@ export default defineConfig({
     nav: [
       { text: '开始使用', link: '/guide/getting-started' },
       { text: '全部服务', link: '/guide/catalog' },
+      { text: '配置清单', link: '/guide/compose-config-reference' },
     ],
     sidebar: buildSidebar(),
     search: {

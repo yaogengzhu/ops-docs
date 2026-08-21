@@ -28,6 +28,7 @@ pnpm preview
 - 站点域名：[`docs/.vitepress/site.ts`](docs/.vitepress/site.ts)
 - 「详解」页手写 Markdown（如 `docs/database/mysql.md`），并在 catalog 里设 `"featured": true`
 - 其余服务：`pnpm gen:stubs` 生成索引卡（会覆盖非 featured 的 `.md`，不要在 stub 里手写长期内容）
+- 逐 Compose 配置清单：安装 PyYAML，并在拉取配套上游仓库后运行 `python scripts/generate-compose-reference.py <上游仓库目录>`
 
 每页请填写 `title`、`description`（约 80–120 字），便于搜索引擎和分享卡片。
 
