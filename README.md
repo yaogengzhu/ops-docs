@@ -31,38 +31,36 @@ pnpm preview
 
 每页请填写 `title`、`description`（约 80–120 字），便于搜索引擎和分享卡片。
 
-## 部署到 Cloudflare Pages
+## 部署到 Cloudflare Workers
 
 账号 `4565be562a022ff9b31775df002f1169`，域名挂在 `zhizili.com` 下，站点用子域 **ops.zhizili.com**。
 
 ### 控制台（推荐，连 Git 后自动发）
 
 1. 打开 [Cloudflare Dashboard · zhizili.com](https://dash.cloudflare.com/4565be562a022ff9b31775df002f1169/zhizili.com)
-2. 左侧 **Workers 和 Pages** → **创建** → **Pages** → 连接本仓库
+2. 左侧 **Workers 和 Pages** → **创建** → 导入现有 Git 仓库
 3. 构建设置：
-   - 框架预设：无 / Vite
-   - 构建命令：`pnpm install && pnpm gen:stubs && pnpm build`
-   - 构建输出目录：`docs/.vitepress/dist`
-   - Node 版本：`20`
+   - 构建命令：`pnpm run build`
+   - 部署命令：`npx wrangler deploy`
+   - 非生产分支部署命令：`npx wrangler versions upload`
+   - 根目录：`/`
 4. 项目名填 `ops-docs`
-5. 部署完成后：**自定义域** → 添加 `ops.zhizili.com`（会在 `zhizili.com` 区自动加 CNAME）
+5. 部署完成后：**设置** → **域和路由** → 添加 `ops.zhizili.com`
 
 不要打开 Cloudflare 的 HTML Auto Minify，否则 Vue 注释被去掉会水合失败。
 
 ### 本机直接上传
 
-在 Cloudflare 创建 API Token（权限：`Account` → `Cloudflare Pages` → `Edit`），然后：
+先登录 Wrangler：
 
 ```shell
-npx wrangler pages project create ops-docs
-npx wrangler pages deploy docs/.vitepress/dist --project-name=ops-docs
+npx wrangler login
+pnpm deploy
 ```
 
-或 `pnpm deploy`（需已登录 wrangler）。
+控制台连接 Git 后，推送 `master` 会自动构建并部署，无需另配 GitHub Actions。
 
-CI 推送 `main` / `master` 也会发版，需在仓库 Secrets 里配置 `CLOUDFLARE_API_TOKEN`。若已用控制台「连接 Git」，可关掉 GitHub Actions，避免发两遍。
-
-若要挂到根域 `zhizili.com`，在 Pages 自定义域再加一条，并把 `docs/.vitepress/site.ts` 的 `hostname`、`docs/public/robots.txt` 改成对应地址。
+若要挂到根域 `zhizili.com`，在 Worker 的域和路由中添加自定义域，并把 `docs/.vitepress/site.ts` 的 `hostname`、`docs/public/robots.txt` 改成对应地址。
 
 ## 版权
 
