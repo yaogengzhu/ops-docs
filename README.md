@@ -45,7 +45,7 @@ pnpm preview
    - 非生产分支部署命令：`npx wrangler versions upload`
    - 根目录：`/`
 4. 项目名填 `ops-docs`
-5. 部署完成后：**设置** → **域和路由** → 添加 `ops.zhizili.com`
+5. `wrangler.toml` 已声明自定义域 `ops.zhizili.com`，部署时 Cloudflare 会自动创建 DNS 记录和证书
 
 不要打开 Cloudflare 的 HTML Auto Minify，否则 Vue 注释被去掉会水合失败。
 

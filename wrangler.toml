@@ -1,5 +1,10 @@
 name = "ops-docs"
 compatibility_date = "2026-08-21"
+workers_dev = true
 
 [assets]
 directory = "./docs/.vitepress/dist"
+
+[[routes]]
+pattern = "ops.zhizili.com"
+custom_domain = true
